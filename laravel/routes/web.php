@@ -18,8 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/editor', function () {
-    // Только аутентифицированные пользователи могут зайти...
-})->middleware('auth');
 
 Route::get('/editor','EditorControler@index')->name('editor');
